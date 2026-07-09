@@ -1,5 +1,5 @@
-require('dotenv').config();
-
+r
+const config = require('./lib/config')
 const express = require('express');
 const apiRouter = require('./controllers');
 
@@ -14,4 +14,4 @@ app.use(errors.notFound);
 app.use(errors.globalHandler); 
 
 
-app.listen(3000, () => console.info('Application listen at port 3000'));
+app.listen(config.get('port'), () => console.info(`Application listen at port ${port}'`));
